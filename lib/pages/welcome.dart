@@ -13,37 +13,36 @@ class WelcomPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(
                 'CHAUNZIKA APP',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
+              padding: EdgeInsets.symmetric(horizontal: 40,vertical: 100),
               child: Text(
                 'Chaunzika App is an Online Mobile Application platform for registering,replacing or renewing Malawian National ID card',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             //button
-            Container(
-              padding: const EdgeInsets.only(top: 40),
-              decoration: const BoxDecoration(),
-              child: const Center(
-                child: Text(
-                  'Get started',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 26,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.white,
-                    decorationThickness: 1,
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 30),
+              child: Container(
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.purple[300],
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Get Started',
+                    style: TextStyle(fontSize: 24, color: Colors.white),
                   ),
                 ),
               ),
-            ),
+            )
           ],
         ),
       )),
