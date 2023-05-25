@@ -1,4 +1,3 @@
-
 import 'package:chaunzika_app/pages/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +90,7 @@ class LoginPage extends StatelessWidget {
                         horizontal: 40, vertical: 20),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.grey[600],
+                        color: Colors.green[600],
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Padding(
@@ -148,35 +147,30 @@ class LoginPage extends StatelessWidget {
 
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 10),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Signup(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 40),
-                        decoration: const BoxDecoration(),
-                        child: const Center(
-                          child: Text(
-                            'create Account',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 26,
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.white,
-                              decorationThickness: 1,
-                            ),
+                        horizontal: 40, vertical: 10),
+                    child: Row(
+                      children: [
+                        const Text(
+                          'Don\'t have an account?',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Signup(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            ' Sign Up',
+                            style: TextStyle(fontSize: 20, color: Colors.green),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ),
+                  )
                   //register
                 ],
               ),
