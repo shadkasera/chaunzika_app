@@ -7,7 +7,7 @@ class WelcomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      backgroundColor: Colors.grey[500],
       body: SafeArea(
           child: Center(
         child: Column(
@@ -41,7 +41,7 @@ class WelcomPage extends StatelessWidget {
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Colors.purple[300],
+                    color: Colors.green[300],
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const Center(

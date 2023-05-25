@@ -221,7 +221,7 @@ class Signup extends StatelessWidget {
                   // signup
 
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
                     child: Row(
                       children:  [
                         const Text(
