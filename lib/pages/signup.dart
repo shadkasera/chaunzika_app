@@ -60,7 +60,7 @@ class Signup extends StatelessWidget {
                     ),
                   ),
                   //another field
-                   Padding(
+                  Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 20),
                     child: Container(
@@ -84,7 +84,7 @@ class Signup extends StatelessWidget {
                     ),
                   ),
                   // another field
-                   Padding(
+                  Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 20),
                     child: Container(
@@ -106,7 +106,7 @@ class Signup extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ), 
+                  ),
                   //another nfield
 
                   Padding(
@@ -123,7 +123,7 @@ class Signup extends StatelessWidget {
                           obscureText: true,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Create password Password',
+                            hintText: 'Create Password',
                             hintStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -165,7 +165,7 @@ class Signup extends StatelessWidget {
                         horizontal: 40, vertical: 20),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.grey[600],
+                        color: Colors.green[600],
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Padding(
@@ -221,36 +221,29 @@ class Signup extends StatelessWidget {
                   // signup
 
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 10),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
+                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    child: Row(
+                      children:  [
+                        const Text(
+                          'Already have an account?',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                         GestureDetector(onTap: () {
+                            Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const LoginPage(),
                           ),
                         );
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 40),
-                        decoration: const BoxDecoration(),
-                        child: const Center(
-                          child: Text(
-                            'Log in instead',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 26,
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.white,
-                              decorationThickness: 1,
-                            ),
-                          ),
-                        ),
-                      ),
+                         },
+                           child: const Text(
+                            ' Log in',
+                            style: TextStyle(fontSize: 20, color: Colors.green),
+                                                 ),
+                         ),
+                      ],
                     ),
-                  ),
+                  )
                   //register
                 ],
               ),
