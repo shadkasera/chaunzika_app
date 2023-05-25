@@ -1,3 +1,4 @@
+import 'package:chaunzika_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatelessWidget {
@@ -29,16 +30,25 @@ class WelcomPage extends StatelessWidget {
             //button
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 30),
-              child: Container(
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.purple[300],
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+              child: GestureDetector(onTap: () {
+                Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginPage(),
+                              ),
+                            );
+              },
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.purple[300],
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Get Started',
+                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    ),
                   ),
                 ),
               ),
