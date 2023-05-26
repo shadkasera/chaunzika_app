@@ -1,3 +1,5 @@
+import 'package:chaunzika_app/pages/homelanding.dart';
+import 'package:chaunzika_app/pages/landing.dart';
 import 'package:chaunzika_app/pages/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -97,12 +99,12 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const LandingScreen(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LandingScreen(),
+                              ),
+                            );
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,

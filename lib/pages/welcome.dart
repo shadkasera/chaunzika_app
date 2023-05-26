@@ -13,7 +13,7 @@ class WelcomPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
+                       const Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(
                 'CHAUNZIKA APP',
