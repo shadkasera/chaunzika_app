@@ -18,7 +18,7 @@ class _LandingScreenState extends State<LandingScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
    Homelanding(),
-   Register(),
+  
    Profile(),
 
 
@@ -49,10 +49,7 @@ class _LandingScreenState extends State<LandingScreen> {
             label: 'Home',
           ),
          
-          BottomNavigationBarItem(
-            icon: Icon(Icons.app_registration),
-            label: 'Registration',
-          ),
+        
            BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',

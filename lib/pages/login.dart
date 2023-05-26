@@ -1,4 +1,3 @@
-import 'package:chaunzika_app/pages/homelanding.dart';
 import 'package:chaunzika_app/pages/landing.dart';
 import 'package:chaunzika_app/pages/signup.dart';
 import 'package:flutter/material.dart';
