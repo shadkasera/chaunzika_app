@@ -1,3 +1,4 @@
+import 'package:chaunzika_app/pages/fingerprint.dart';
 import 'package:chaunzika_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -97,7 +98,7 @@ class Homelanding extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Enter your phone number',
+                            hintText: 'Enter your nationality',
                             hintStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -120,10 +121,10 @@ class Homelanding extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.only(left: 60),
                         child: TextField(
-                          obscureText: true,
+                         
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Create Password',
+                            hintText: 'Enter date of birth',
                             hintStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -146,10 +147,35 @@ class Homelanding extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.only(left: 60),
                         child: TextField(
-                          obscureText: true,
+                        
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Confirm Password',
+                            hintText: 'Enter your district ',
+                            hintStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  //another 
+                   Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[600],
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 60),
+                        child: TextField(
+                        
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Enter your village ',
                             hintStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -172,12 +198,12 @@ class Homelanding extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const LoginPage(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Fingerprint(),
+                              ),
+                            );
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
