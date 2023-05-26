@@ -1,4 +1,5 @@
 import 'package:chaunzika_app/pages/fingerprint.dart';
+import 'package:chaunzika_app/pages/landing.dart';
 import 'package:chaunzika_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -37,6 +38,22 @@ class Homelanding extends StatelessWidget {
                     ),
                   ),
                   //one field
+                   Row(
+                    children:  [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: GestureDetector(onTap: () {
+                           Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginPage(),
+                              ),
+                            );
+                        },
+                          child: const Icon(Icons.arrow_back, size: 40, color: Colors.white,)),
+                      ),
+                    ],
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 20),

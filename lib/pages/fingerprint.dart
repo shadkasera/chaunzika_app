@@ -1,6 +1,6 @@
 import 'package:chaunzika_app/pages/homelanding.dart';
 import 'package:chaunzika_app/pages/landing.dart';
-import 'package:chaunzika_app/pages/signup.dart';
+import 'package:chaunzika_app/pages/verified.dart';
 import 'package:flutter/material.dart';
 
 class Fingerprint extends StatelessWidget {
@@ -23,8 +23,8 @@ class Fingerprint extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Padding(
+                children: [
+                  const Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 25,
                     ),
@@ -38,19 +38,69 @@ class Fingerprint extends StatelessWidget {
                     ),
                   ),
                   //one field
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //text
-                  Text(
+                  const Text(
                     'Put your thumb here',
                     style: TextStyle(fontSize: 28, color: Colors.white),
                   ),
 
-                  Icon(
-                    Icons.fingerprint,
-                    size: 300,
-                    color: Colors.white,
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LandingScreen(),
+                              ),
+                            );
+                          },
+                          child: const Icon(
+                            Icons.arrow_back,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Verified(),
+                              ),
+                            );
+                          },
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Verified(),
+                        ),
+                      );
+                    },
+                    child: const Icon(
+                      Icons.fingerprint,
+                      size: 300,
+                      color: Colors.white,
+                    ),
                   ),
 
                   //login button
